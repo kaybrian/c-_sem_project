@@ -1,0 +1,14 @@
+C:\Users\Kay\Desktop\c#\hospitalApp\hospitalApp\bin\Debug\hospitalApp.exe.config
+C:\Users\Kay\Desktop\c#\hospitalApp\hospitalApp\bin\Debug\hospitalApp.exe
+C:\Users\Kay\Desktop\c#\hospitalApp\hospitalApp\bin\Debug\hospitalApp.pdb
+C:\Users\Kay\Desktop\c#\hospitalApp\hospitalApp\obj\Debug\hospitalApp.csprojResolveAssemblyReference.cache
+C:\Users\Kay\Desktop\c#\hospitalApp\hospitalApp\obj\Debug\hospitalApp.Form1.resources
+C:\Users\Kay\Desktop\c#\hospitalApp\hospitalApp\obj\Debug\hospitalApp.Properties.Resources.resources
+C:\Users\Kay\Desktop\c#\hospitalApp\hospitalApp\obj\Debug\hospitalApp.csproj.GenerateResource.Cache
+C:\Users\Kay\Desktop\c#\hospitalApp\hospitalApp\obj\Debug\hospitalApp.exe
+C:\Users\Kay\Desktop\c#\hospitalApp\hospitalApp\obj\Debug\hospitalApp.pdb
+C:\Users\Kay\Desktop\c#\hospitalApp\hospitalApp\obj\Debug\hospitalApp.home.resources
+C:\Users\Kay\Desktop\c#\hospitalApp\hospitalApp\obj\Debug\hospitalApp.register.resources
+C:\Users\Kay\Desktop\c#\hospitalApp\hospitalApp\obj\Debug\hospitalApp.appointment.resources
+C:\Users\Kay\Desktop\c#\hospitalApp\hospitalApp\obj\Debug\hospitalApp.Form2.resources
+C:\Users\Kay\Desktop\c#\hospitalApp\hospitalApp\obj\Debug\hospitalApp.patients.resources
