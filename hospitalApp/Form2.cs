@@ -51,6 +51,10 @@ namespace hospitalApp
                         cmd.Parameters.AddWithValue("@medicaton", medicaton.Text.Trim());
                         cmd.Parameters.AddWithValue("@medication_for", medication_for.Text.Trim());
                         cmd.ExecuteNonQuery();
+                        MessageBox.Show("You have sucessfully added the patient to the data base. ");
+                        Form2 new_pat = new Form2();
+                        this.Hide();
+                        new_pat.Show();
                     }
 
                 }
