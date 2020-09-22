@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.button2 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.visit_date = new System.Windows.Forms.DateTimePicker();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.phone = new System.Windows.Forms.TextBox();
@@ -39,30 +39,30 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.medication_for = new System.Windows.Forms.TextBox();
+            this.medicaton = new System.Windows.Forms.TextBox();
+            this.caused = new System.Windows.Forms.TextBox();
+            this.makes_better = new System.Windows.Forms.TextBox();
+            this.symptoms = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.contact = new System.Windows.Forms.GroupBox();
             this.patient_records = new System.Windows.Forms.Button();
             this.patient = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.contact = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.symptoms = new System.Windows.Forms.TextBox();
-            this.start = new System.Windows.Forms.TextBox();
-            this.makes = new System.Windows.Forms.TextBox();
-            this.caused = new System.Windows.Forms.TextBox();
-            this.medications = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.medicationdor = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.starting = new System.Windows.Forms.DateTimePicker();
             this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.contact.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.contact.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,12 +76,12 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // dateTimePicker1
+            // visit_date
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(80, 138);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 3;
+            this.visit_date.Location = new System.Drawing.Point(80, 138);
+            this.visit_date.Name = "visit_date";
+            this.visit_date.Size = new System.Drawing.Size(200, 20);
+            this.visit_date.TabIndex = 3;
             // 
             // radioButton2
             // 
@@ -171,6 +171,138 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Add New Patient";
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.medication_for);
+            this.groupBox4.Controls.Add(this.medicaton);
+            this.groupBox4.Controls.Add(this.starting);
+            this.groupBox4.Controls.Add(this.caused);
+            this.groupBox4.Controls.Add(this.makes_better);
+            this.groupBox4.Controls.Add(this.symptoms);
+            this.groupBox4.Controls.Add(this.label10);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.label7);
+            this.groupBox4.Controls.Add(this.label6);
+            this.groupBox4.Controls.Add(this.label5);
+            this.groupBox4.Location = new System.Drawing.Point(46, 214);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(733, 236);
+            this.groupBox4.TabIndex = 6;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Symptoms and Pain";
+            // 
+            // medication_for
+            // 
+            this.medication_for.Location = new System.Drawing.Point(173, 171);
+            this.medication_for.Name = "medication_for";
+            this.medication_for.Size = new System.Drawing.Size(237, 20);
+            this.medication_for.TabIndex = 1;
+            // 
+            // medicaton
+            // 
+            this.medicaton.Location = new System.Drawing.Point(215, 139);
+            this.medicaton.Name = "medicaton";
+            this.medicaton.Size = new System.Drawing.Size(237, 20);
+            this.medicaton.TabIndex = 1;
+            // 
+            // caused
+            // 
+            this.caused.Location = new System.Drawing.Point(215, 110);
+            this.caused.Name = "caused";
+            this.caused.Size = new System.Drawing.Size(237, 20);
+            this.caused.TabIndex = 1;
+            // 
+            // makes_better
+            // 
+            this.makes_better.Location = new System.Drawing.Point(173, 84);
+            this.makes_better.Name = "makes_better";
+            this.makes_better.Size = new System.Drawing.Size(237, 20);
+            this.makes_better.TabIndex = 1;
+            // 
+            // symptoms
+            // 
+            this.symptoms.Location = new System.Drawing.Point(173, 31);
+            this.symptoms.Name = "symptoms";
+            this.symptoms.Size = new System.Drawing.Size(237, 20);
+            this.symptoms.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(19, 178);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(95, 13);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "What are they for?";
+            this.label10.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(19, 146);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(162, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Do I have any new medications?";
+            this.label9.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(19, 117);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(190, 13);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "What do I think caused this symptom? ";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(19, 92);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(157, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "What makes it better or worse? ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(19, 67);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(90, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "When did it start?";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(19, 38);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(109, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "What is my symptom?";
+            // 
+            // contact
+            // 
+            this.contact.Controls.Add(this.phone);
+            this.contact.Controls.Add(this.label1);
+            this.contact.Controls.Add(this.visit_date);
+            this.contact.Controls.Add(this.label2);
+            this.contact.Controls.Add(this.radioButton2);
+            this.contact.Controls.Add(this.label3);
+            this.contact.Controls.Add(this.radioButton1);
+            this.contact.Controls.Add(this.label4);
+            this.contact.Controls.Add(this.name);
+            this.contact.Location = new System.Drawing.Point(176, 19);
+            this.contact.Name = "contact";
+            this.contact.Size = new System.Drawing.Size(425, 173);
+            this.contact.TabIndex = 5;
+            this.contact.TabStop = false;
+            this.contact.Text = "Contact Info ";
+            // 
             // patient_records
             // 
             this.patient_records.Location = new System.Drawing.Point(53, 282);
@@ -224,145 +356,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Choose Action";
             // 
-            // contact
-            // 
-            this.contact.Controls.Add(this.phone);
-            this.contact.Controls.Add(this.label1);
-            this.contact.Controls.Add(this.dateTimePicker1);
-            this.contact.Controls.Add(this.label2);
-            this.contact.Controls.Add(this.radioButton2);
-            this.contact.Controls.Add(this.label3);
-            this.contact.Controls.Add(this.radioButton1);
-            this.contact.Controls.Add(this.label4);
-            this.contact.Controls.Add(this.name);
-            this.contact.Location = new System.Drawing.Point(176, 19);
-            this.contact.Name = "contact";
-            this.contact.Size = new System.Drawing.Size(425, 173);
-            this.contact.TabIndex = 5;
-            this.contact.TabStop = false;
-            this.contact.Text = "Contact Info ";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.medicationdor);
-            this.groupBox4.Controls.Add(this.medications);
-            this.groupBox4.Controls.Add(this.caused);
-            this.groupBox4.Controls.Add(this.makes);
-            this.groupBox4.Controls.Add(this.start);
-            this.groupBox4.Controls.Add(this.symptoms);
-            this.groupBox4.Controls.Add(this.label10);
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.Location = new System.Drawing.Point(46, 214);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(733, 236);
-            this.groupBox4.TabIndex = 6;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Symptoms and Pain";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 38);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "What is my symptom?";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 67);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "When did it start?";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(19, 92);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(157, 13);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "What makes it better or worse? ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(19, 117);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(190, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "What do I think caused this symptom? ";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(19, 146);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(162, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Do I have any new medications?";
-            this.label9.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // symptoms
-            // 
-            this.symptoms.Location = new System.Drawing.Point(173, 31);
-            this.symptoms.Name = "symptoms";
-            this.symptoms.Size = new System.Drawing.Size(237, 20);
-            this.symptoms.TabIndex = 1;
-            // 
-            // start
-            // 
-            this.start.Location = new System.Drawing.Point(173, 58);
-            this.start.Name = "start";
-            this.start.Size = new System.Drawing.Size(237, 20);
-            this.start.TabIndex = 1;
-            // 
-            // makes
-            // 
-            this.makes.Location = new System.Drawing.Point(173, 84);
-            this.makes.Name = "makes";
-            this.makes.Size = new System.Drawing.Size(237, 20);
-            this.makes.TabIndex = 1;
-            // 
-            // caused
-            // 
-            this.caused.Location = new System.Drawing.Point(215, 110);
-            this.caused.Name = "caused";
-            this.caused.Size = new System.Drawing.Size(237, 20);
-            this.caused.TabIndex = 1;
-            // 
-            // medications
-            // 
-            this.medications.Location = new System.Drawing.Point(215, 139);
-            this.medications.Name = "medications";
-            this.medications.Size = new System.Drawing.Size(237, 20);
-            this.medications.TabIndex = 1;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(19, 178);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(95, 13);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "What are they for?";
-            this.label10.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // medicationdor
-            // 
-            this.medicationdor.Location = new System.Drawing.Point(173, 171);
-            this.medicationdor.Name = "medicationdor";
-            this.medicationdor.Size = new System.Drawing.Size(237, 20);
-            this.medicationdor.TabIndex = 1;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::hospitalApp.Properties.Resources.hospital;
@@ -372,6 +365,13 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // starting
+            // 
+            this.starting.Location = new System.Drawing.Point(173, 58);
+            this.starting.Name = "starting";
+            this.starting.Size = new System.Drawing.Size(237, 20);
+            this.starting.TabIndex = 3;
             // 
             // Form2
             // 
@@ -385,11 +385,11 @@
             this.Text = "Add Patient ";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.groupBox2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.contact.ResumeLayout(false);
-            this.contact.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.contact.ResumeLayout(false);
+            this.contact.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -398,7 +398,7 @@
         #endregion
 
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker visit_date;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.TextBox phone;
@@ -420,13 +420,13 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox medicationdor;
-        private System.Windows.Forms.TextBox medications;
+        private System.Windows.Forms.TextBox medication_for;
+        private System.Windows.Forms.TextBox medicaton;
         private System.Windows.Forms.TextBox caused;
-        private System.Windows.Forms.TextBox makes;
-        private System.Windows.Forms.TextBox start;
+        private System.Windows.Forms.TextBox makes_better;
         private System.Windows.Forms.TextBox symptoms;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DateTimePicker starting;
     }
 }

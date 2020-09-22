@@ -32,22 +32,22 @@
             this.patient_records = new System.Windows.Forms.Button();
             this.patient = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.name = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.phone = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.visit_date = new System.Windows.Forms.DateTimePicker();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.phone = new System.Windows.Forms.TextBox();
+            this.name = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -95,10 +95,20 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::hospitalApp.Properties.Resources.hospital;
+            this.pictureBox1.Location = new System.Drawing.Point(53, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(191, 151);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.visit_date);
             this.groupBox2.Controls.Add(this.radioButton2);
             this.groupBox2.Controls.Add(this.radioButton1);
             this.groupBox2.Controls.Add(this.phone);
@@ -114,64 +124,22 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Make Appointment";
             // 
-            // label1
+            // button2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name : ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.button2.Location = new System.Drawing.Point(112, 327);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Save ";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // name
+            // visit_date
             // 
-            this.name.Location = new System.Drawing.Point(32, 49);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(237, 20);
-            this.name.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(28, 84);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Phone : ";
-            this.label2.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // phone
-            // 
-            this.phone.Location = new System.Drawing.Point(32, 107);
-            this.phone.Name = "phone";
-            this.phone.Size = new System.Drawing.Size(237, 20);
-            this.phone.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 140);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 20);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Gender : ";
-            this.label3.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(76, 175);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(48, 17);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Male";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.visit_date.Location = new System.Drawing.Point(69, 236);
+            this.visit_date.Name = "visit_date";
+            this.visit_date.Size = new System.Drawing.Size(200, 20);
+            this.visit_date.TabIndex = 3;
             // 
             // radioButton2
             // 
@@ -185,6 +153,32 @@
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(76, 175);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(48, 17);
+            this.radioButton1.TabIndex = 2;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Male";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // phone
+            // 
+            this.phone.Location = new System.Drawing.Point(32, 107);
+            this.phone.Name = "phone";
+            this.phone.Size = new System.Drawing.Size(237, 20);
+            this.phone.TabIndex = 1;
+            // 
+            // name
+            // 
+            this.name.Location = new System.Drawing.Point(32, 49);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(237, 20);
+            this.name.TabIndex = 1;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -196,12 +190,38 @@
             this.label4.Text = "Date : ";
             this.label4.Click += new System.EventHandler(this.label1_Click);
             // 
-            // dateTimePicker1
+            // label3
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(69, 236);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 3;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(28, 140);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 20);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Gender : ";
+            this.label3.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(28, 84);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Phone : ";
+            this.label2.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(28, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Name : ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox3
             // 
@@ -212,25 +232,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Current Appointments";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(112, 327);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Save ";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::hospitalApp.Properties.Resources.hospital;
-            this.pictureBox1.Location = new System.Drawing.Point(53, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(191, 151);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // appointment
             // 
@@ -243,9 +244,9 @@
             this.Name = "appointment";
             this.Text = "appointment";
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -265,7 +266,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker visit_date;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button2;
