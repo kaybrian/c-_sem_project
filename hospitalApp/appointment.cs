@@ -35,7 +35,7 @@ namespace hospitalApp
 
         private void groupBox3_Enter(object sender, EventArgs e)
         {
-
+          
         }
 
         private void patient_Click(object sender, EventArgs e)
@@ -93,6 +93,20 @@ namespace hospitalApp
                 string msg = "Insert Error:";
                 msg += ex.Message;
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlcon = new SqlConnection("Data Source=.;Initial Catalog=sem2;User ID=sa;Password=sap"))
+            {
+                sqlcon.Open();
+                SqlDataAdapter sqldata = new SqlDataAdapter("select * from appointment", sqlcon);
+                DataTable sqltable = new DataTable();
+                sqldata.Fill(sqltable);
+
+                current_patients.DataSource = sqltable;
+            }
+
         }
     }
 }

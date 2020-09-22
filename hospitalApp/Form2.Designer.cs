@@ -59,11 +59,14 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.starting = new System.Windows.Forms.DateTimePicker();
+            this.current_patients = new System.Windows.Forms.DataGridView();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.contact.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.current_patients)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -335,12 +338,13 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Location = new System.Drawing.Point(300, 546);
+            this.groupBox3.Controls.Add(this.current_patients);
+            this.groupBox3.Location = new System.Drawing.Point(65, 546);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(825, 191);
+            this.groupBox3.Size = new System.Drawing.Size(1060, 191);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Current Appointments";
+            this.groupBox3.Text = "Current Patients";
             // 
             // groupBox1
             // 
@@ -373,6 +377,15 @@
             this.starting.Size = new System.Drawing.Size(237, 20);
             this.starting.TabIndex = 3;
             // 
+            // current_patients
+            // 
+            this.current_patients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.current_patients.Location = new System.Drawing.Point(7, 20);
+            this.current_patients.Name = "current_patients";
+            this.current_patients.Size = new System.Drawing.Size(1046, 165);
+            this.current_patients.TabIndex = 0;
+            this.current_patients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -389,8 +402,10 @@
             this.groupBox4.PerformLayout();
             this.contact.ResumeLayout(false);
             this.contact.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.current_patients)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -428,5 +443,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker starting;
+        private System.Windows.Forms.DataGridView current_patients;
     }
 }

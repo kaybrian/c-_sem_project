@@ -45,9 +45,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.current_patients = new System.Windows.Forms.DataGridView();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.current_patients)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -225,6 +229,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.current_patients);
             this.groupBox3.Location = new System.Drawing.Point(591, 37);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(467, 322);
@@ -232,6 +238,24 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Current Appointments";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            // 
+            // current_patients
+            // 
+            this.current_patients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.current_patients.Location = new System.Drawing.Point(16, 49);
+            this.current_patients.Name = "current_patients";
+            this.current_patients.Size = new System.Drawing.Size(445, 267);
+            this.current_patients.TabIndex = 0;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(16, 19);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(169, 23);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "See Patient Appointments";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // appointment
             // 
@@ -247,6 +271,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.current_patients)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -270,5 +296,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView current_patients;
+        private System.Windows.Forms.Button button3;
     }
 }

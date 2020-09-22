@@ -13,6 +13,7 @@ namespace hospitalApp
 {
     public partial class Form2 : Form
     {
+
         public Form2()
         {
             InitializeComponent();
@@ -20,6 +21,7 @@ namespace hospitalApp
 
         private void Form2_Load(object sender, EventArgs e)
         {
+           
 
         }
 
@@ -96,6 +98,24 @@ namespace hospitalApp
             patients seepat = new patients();
             this.Hide();
             seepat.Show();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+          /**  using (SqlConnection sqlcon = new SqlConnection("Data Source=.;Initial Catalog=sem2;User ID=sa;Password=sap"))
+            {
+                sqlcon.Open();
+                SqlDataAdapter sqldata = new SqlDataAdapter("select * from patients", sqlcon);
+                DataTable sqltable = new DataTable();
+                sqldata.Fill(sqltable);
+
+                current_patients.DataSource = sqltable;
+            }**/
         }
     }
 }

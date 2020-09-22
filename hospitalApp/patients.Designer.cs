@@ -34,8 +34,12 @@
             this.appointment = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.current_patients = new System.Windows.Forms.DataGridView();
+            this.results = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.current_patients)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -94,24 +98,47 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(334, 28);
+            this.groupBox2.Controls.Add(this.current_patients);
+            this.groupBox2.Location = new System.Drawing.Point(334, 90);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(591, 434);
+            this.groupBox2.Size = new System.Drawing.Size(591, 372);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Patient Records";
+            // 
+            // current_patients
+            // 
+            this.current_patients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.current_patients.Location = new System.Drawing.Point(6, 19);
+            this.current_patients.Name = "current_patients";
+            this.current_patients.Size = new System.Drawing.Size(584, 330);
+            this.current_patients.TabIndex = 0;
+            this.current_patients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // results
+            // 
+            this.results.Location = new System.Drawing.Point(340, 47);
+            this.results.Name = "results";
+            this.results.Size = new System.Drawing.Size(130, 23);
+            this.results.TabIndex = 3;
+            this.results.Text = "See Patient Results";
+            this.results.UseVisualStyleBackColor = true;
+            this.results.Click += new System.EventHandler(this.results_Click);
             // 
             // patients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(937, 500);
+            this.Controls.Add(this.results);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "patients";
             this.Text = "patients";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.current_patients)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -124,5 +151,7 @@
         private System.Windows.Forms.Button appointment;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView current_patients;
+        private System.Windows.Forms.Button results;
     }
 }
