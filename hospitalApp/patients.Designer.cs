@@ -36,6 +36,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.current_patients = new System.Windows.Forms.DataGridView();
             this.results = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -125,11 +126,21 @@
             this.results.UseVisualStyleBackColor = true;
             this.results.Click += new System.EventHandler(this.results_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(540, 47);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(177, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Export As pdf";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // patients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(937, 500);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.results);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -153,5 +164,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView current_patients;
         private System.Windows.Forms.Button results;
+        private System.Windows.Forms.Button button1;
     }
 }
