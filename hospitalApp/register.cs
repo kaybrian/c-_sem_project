@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,22 @@ namespace hospitalApp
         {
             InitializeComponent();
         }
+        public string Encrypts(string source, string key)
+        {
+            using (TripleDESCryptoServiceProvider tripledes = new TripleDESCryptoServiceProvider())
+            {
+                using (MD5CryptoServiceProvider hashmd5 = new MD5CryptoServiceProvider())
+                {
+                    byte[] bt = hashmd5.ComputeHash(Encoding.UTF8.GetBytes(key));
+                    tripledes.Key = bt;
+                    tripledes.Mode = CipherMode.ECB;
+                    byte[] data = Encoding.Unicode.GetBytes(source);
+                    return Convert.ToBase64String(tripledes.CreateEncryptor().TransformFinalBlock(data, 0, data.Length));
+
+
+                }
+            }
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -25,6 +42,7 @@ namespace hospitalApp
 
         private void userregister_Click(object sender, EventArgs e)
         {
+            string userkey = "m23n4ff4gcw4fs4";
             try
             {
                 
@@ -36,8 +54,9 @@ namespace hospitalApp
                     {
                         if (userusername.Text != null && userpassword.Text != null)
                         {
+                            string user_password = Encrypts(userpassword.Text, userkey);
                             cmd.Parameters.AddWithValue("@username", userusername.Text.Trim());
-                            cmd.Parameters.AddWithValue("@password", userpassword.Text.Trim());
+                            cmd.Parameters.AddWithValue("@password", user_password);
                             cmd.ExecuteNonQuery();
                             MessageBox.Show("Hey " + userusername.Text.Trim() + " you have successfully been registered, Login in to Continue");
                             Form1 login = new Form1();

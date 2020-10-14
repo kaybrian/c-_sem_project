@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,23 @@ namespace hospitalApp
         {
             InitializeComponent();
         }
+        public string Encrypts(string source, string key)
+        {
+            using (TripleDESCryptoServiceProvider tripledes = new TripleDESCryptoServiceProvider())
+            {
+                using (MD5CryptoServiceProvider hashmd5 = new MD5CryptoServiceProvider())
+                {
+                    byte[] bt = hashmd5.ComputeHash(Encoding.UTF8.GetBytes(key));
+                    tripledes.Key = bt;
+                    tripledes.Mode = CipherMode.ECB;
+                    byte[] data = Encoding.Unicode.GetBytes(source);
+                    return Convert.ToBase64String(tripledes.CreateEncryptor().TransformFinalBlock(data, 0, data.Length));
+
+
+                }
+            }
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -50,10 +68,12 @@ namespace hospitalApp
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            string userkey = "m23n4ff4gcw4fs4";
             try
             {
+                string user_password = Encrypts(userpassword.Text, userkey);
                 SqlConnection sqlcon = new SqlConnection("Data Source=.;Initial Catalog=sem2;User ID=sa;Password=sap");
-                string query = "select * from hosiptalLogin where username = '" + username.Text.Trim() + "' and password = '" + userpassword.Text.Trim() + "'";
+                string query = "select * from hosiptalLogin where username = '" + username.Text.Trim() + "' and password = '" + user_password + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
                 DataTable dtbl = new DataTable();
                 sda.Fill(dtbl);
